@@ -302,6 +302,10 @@ function_declaration =
     type,
     block ;
 
+namespace_declaration =
+ "namespace",
+  identifier, ";" ;
+
 parameter_list =
     parameter,
     { ",", parameter } ;
@@ -433,9 +437,20 @@ argument_list =
     { ",", expression } ;
 
 (* Индексация - добавляется postfix оператором *)
-index_expression =
-    primary_expression,
-    { "[", expression, "]" } ;
+
+primary_expression =
+ literal
+| qualified_identifier 
+| function_call 
+| "(", expression, ")" ;
+
+postfix_expression =
+ primary_expression, { "[", expression, "]" } ;
+
+unary_expression = 
+postfix_expression 
+| "-", unary_expression 
+| "!", unary_expression ;
 
 
 (* ЛИТЕРАЛЫ *)

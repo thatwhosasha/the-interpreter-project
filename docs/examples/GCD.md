@@ -1,12 +1,10 @@
 ```
-namespace GCD;
-
 func gcd(a: int, b: int) -> int
 start
     while b != 0
     start
         let temp = b;
-        b = a - (a / b) * b;
+        b = a % b;
         a = temp;
     end
     return a;

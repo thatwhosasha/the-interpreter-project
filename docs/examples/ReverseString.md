@@ -1,6 +1,4 @@
 ```
-namespace ReverseString;
-
 func reverse(str: string) -> string
 start
     let length = len(str);

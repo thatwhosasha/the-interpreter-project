@@ -1,6 +1,4 @@
 ```
-namespace Factorial;
-
 func factorial(n: int) -> int
 start
     if n <= 1

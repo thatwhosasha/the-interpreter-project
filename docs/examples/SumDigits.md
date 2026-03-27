@@ -1,6 +1,4 @@
 ```
-namespace SumDigits;
-
 func sum_digits(n: int) -> int
 start
     let num = n;
@@ -11,7 +9,7 @@ start
     let sum = 0;
     while num > 0
     start
-        let digit = num - (num / 10) * 10;
+        let digit = num % 10;
         sum = sum + digit;
         num = num / 10;
     end

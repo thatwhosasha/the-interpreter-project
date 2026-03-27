@@ -1,6 +1,4 @@
 ```
-namespace Power;
-
 func pow(base: int, exponent: int) -> int
 start
     let result = 1;

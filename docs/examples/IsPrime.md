@@ -1,6 +1,4 @@
 ```
-namespace IsPrime;
-
 func is_prime(n: int) -> bool
 start
     if n <= 1
